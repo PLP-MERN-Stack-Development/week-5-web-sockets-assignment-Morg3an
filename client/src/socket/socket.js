@@ -23,12 +23,15 @@ export const useSocket = () => {
   const [typingUsers, setTypingUsers] = useState([]);
 
   // Connect to socket server
-  const connect = (username) => {
+  const connect = (username, token) => {
+    socket.auth = { token };
     socket.connect();
+
     if (username) {
       socket.emit('user_join', username);
     }
   };
+
 
   // Disconnect from socket server
   const disconnect = () => {

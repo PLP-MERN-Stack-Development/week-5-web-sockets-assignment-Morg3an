@@ -1,0 +1,14 @@
+/node_modules
+
+# Dependencies
+node_modules/
+# Logs
+logs/
+
+package-lock.json
+npm-debug.log*
+
+# Environment variables
+.env
+# Build output
+dist/
